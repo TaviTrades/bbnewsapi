@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'tavitrades.vercel.app',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'bbfinapi-2fcb1c04160e.herokuapp.com'
 ]
 
 
@@ -58,7 +59,8 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    'https://tavitrades.vercel.app'
+    'https://tavitrades.vercel.app',
+    'https://bbfinapi-2fcb1c04160e.herokuapp.com/'
 ]
 
 
