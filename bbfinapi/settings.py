@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-ycn-6%43hy3n@_h0go)1@tzau)#a#si&5ly$6(%@rd*=s9&@7&
 DEBUG = True
 
 ALLOWED_HOSTS = [
-'*'
+    'tavitrades.vercel.app',
+    'localhost',
+    '127.0.0.1'
 ]
 
 
@@ -56,6 +58,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    'https://tavitrades.vercel.app'
 ]
 
 
@@ -125,7 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
