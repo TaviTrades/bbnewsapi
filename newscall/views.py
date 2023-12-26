@@ -22,7 +22,7 @@ class StoriesAPIView(APIView):
             }
             response = requests.get(url, headers=headers, params=querystring)
             cached_data = response.json()
-            cache.set('stories_list', cached_data, timeout=3600)  # Cache for 1 hour
+            cache.set('stories_list', cached_data, timeout=43200)
         return Response(cached_data)
 
 class StoryDetailAPIView(APIView):
@@ -39,6 +39,6 @@ class StoryDetailAPIView(APIView):
             }
             response = requests.get(url, headers=headers, params=querystring)
             cached_data = response.json()
-            cache.set(cache_key, cached_data, timeout=3600)  # Cache for 1 hour
+            cache.set(cache_key, cached_data, timeout=43200) 
         
         return Response(cached_data)
